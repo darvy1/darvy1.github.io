@@ -1,0 +1,104 @@
+:root {
+  --darkGrey: rgb(25, 25, 25);
+	--rootBackground: rgb(255,255,255);
+  --mantis: #6cc644;
+  --rootFontFamily: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+body {
+	background-color: var(--rootBackground);
+}
+
+body,
+button,
+input {
+  font-family: var(--rootFontFamily);
+  margin: 0;
+}
+
+.upper-section {
+  position: relative;
+  height: 100vh; /* * Adjusted to take the full viewport height */
+  overflow: hidden; 
+}
+
+@keyframes show-content {
+  0% {
+		top: 10%;
+		right: 10%;
+		left: 10%;
+		bottom: 10%;
+  }
+
+  50% {
+    top: 5%;
+    right: 5%;
+    left: 15%;
+    bottom: 15%;
+  }
+  
+	100% {
+    top: 8%;
+    right: 8%;
+    left: 12%;
+    bottom: 12%;
+  }
+}
+
+@keyframes show-backdrop {
+  0% {
+		top: 10%;
+		right: 10%;
+		left: 10%;
+		bottom: 10%;
+  }
+
+  50% {
+    top: 15%;
+    right: 15%;
+    left: 5%;
+    bottom: 5%;
+  }
+  
+	100% {
+    top: 12%;
+    right: 12%;
+    left: 8%;
+    bottom: 8%;
+  }
+}
+
+.content {
+  background-color: var(--darkGrey);
+  z-index: 2;
+  color: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 2%; 
+  font-size: 150%;
+	animation: show-content 1s ease-out 1s forwards;
+}
+
+.content div {
+  padding: 10%;
+}
+
+.content,
+.backdrop {
+	top: 10%;
+  right: 10%;
+  left: 10%;
+  bottom: 10%;
+	position: absolute;
+	border-radius: 1%;
+}
+
+.backdrop {
+  background-color: var(--mantis);
+  z-index: 1;
+	animation: show-backdrop 1s ease-out 1s forwards;
+}
+
+.profile-pic {
+  max-width: 100%; 
+}
