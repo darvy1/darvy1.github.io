@@ -73,10 +73,10 @@ input {
   z-index: 2;
   color: white;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 20%;
   column-gap: 2%; 
   font-size: 150%;
-	animation: show-content 1s ease-out 1s forwards;
+	animation: show-content 0.7s ease-out 0.7s forwards;
 }
 
 .content div {
@@ -96,9 +96,33 @@ input {
 .backdrop {
   background-color: var(--mantis);
   z-index: 1;
-	animation: show-backdrop 1s ease-out 1s forwards;
+	animation: show-backdrop 0.7s ease-out 0.7s forwards;
 }
 
 .profile-pic {
   max-width: 100%; 
+  min-width: 20%;
+  padding-right: 1%;
+}
+
+.profile-pic-container{
+  position: relative;
+}
+
+.profile-pic-backdrop{
+  position: absolute;
+  top: -3%;
+  right: -19%;
+  background-color: white;
+  display: grid;
+  border-bottom-left-radius: 10%;
+}
+
+@media (max-width:370px) {
+  .upper-section-text {
+    font-size: 70%
+  }
+  .content{
+    column-gap: 0.1%;
+  }
 }
