@@ -1,7 +1,7 @@
 :root {
   --darkGrey: rgb(25, 25, 25);
 	--rootBackground: rgb(255,255,255);
-  --mantis: #6cc644;
+  --mantis: #6cc644; 
   --rootFontFamily: "Roboto", Helvetica, Arial, sans-serif;
 }
 
@@ -23,13 +23,6 @@ input {
 }
 
 @keyframes show-content {
-  0% {
-		top: 10%;
-		right: 10%;
-		left: 10%;
-		bottom: 10%;
-  }
-
   50% {
     top: 5%;
     right: 5%;
@@ -46,13 +39,6 @@ input {
 }
 
 @keyframes show-backdrop {
-  0% {
-		top: 10%;
-		right: 10%;
-		left: 10%;
-		bottom: 10%;
-  }
-
   50% {
     top: 15%;
     right: 15%;

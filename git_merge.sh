@@ -7,4 +7,5 @@ read mergingBranch
 
 git checkout $branch
 git merge $mergingBranch
+echo Merged "$mergingBranch" into "$branch"
 git push
