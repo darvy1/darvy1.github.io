@@ -9,4 +9,4 @@ read branch
 git add .
 git commit -m "$commit_message"
 echo Committed staged changes to "$branch" in "$commit_message"
-git push origin "$branch
+git push
